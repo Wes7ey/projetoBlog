@@ -50,6 +50,7 @@ export default{
 </script>
 
 <template>
+<RouterView />
   
   <div id="lista-posts">
     <div class="post" v-for="post in posts" :key="post.key">
@@ -69,18 +70,20 @@ export default{
 
   </form>
 
-  <RouterView />
 </template>
 
 <style scoped>
 
-form{
+
+
+/* form{
   display: flex;
   flex-direction: column;
 }
 
 form > *{
   margin: 1rem;
-}
+} */
+
 
 </style>
