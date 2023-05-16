@@ -74,16 +74,14 @@ export default{
 
 <style scoped>
 
-
-
-/* form{
+ form{
   display: flex;
   flex-direction: column;
 }
 
 form > *{
   margin: 1rem;
-} */
+}
 
 
 </style>

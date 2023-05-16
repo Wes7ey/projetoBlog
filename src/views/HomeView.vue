@@ -24,9 +24,24 @@
   </nav>
 
 </body>
+
+<footer class="footer">
+  <div class="widget-content" style="text-align: center;">Tecnologia do <a href="https://www.blogger.com" target="_blank">Blogger</a>.
+</div>
+
+</footer>
+
 </template>
 
 <style scoped>
+
+.footer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .Nav{
   display: flex;
   flex-direction: row;
@@ -35,7 +50,6 @@
   padding-inline-end: 30vh;
   width:100%;
   color: #012E40;
-  background-color: #012E40;
 }
 
 .links{
