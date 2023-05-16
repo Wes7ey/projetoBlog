@@ -35,7 +35,6 @@
   padding-inline-end: 30vh;
   width:100%;
   color: #012E40;
-  background-color: #012E40;
 }
 
 .links{
