@@ -4,9 +4,9 @@
 
  </script>
 
-<template>
-<body>
-  <nav class="Nav">
+<template >
+  <header>
+    <nav class="Nav">
   <div class="logo">
   <img src="@/assets/Blogger_icon.svg.png" class ="blogIcon"/>
 
@@ -18,23 +18,40 @@
 </div>
 
   <div class="links">
-<a href="https://www.blogger.com/about/?bpli=1#create" style="text-decoration:none">Crie um blog </a>&ensp;
-<a href="https://www.blogger.com/about/?bpli=1" style="text-decoration:none">Login </a>
+<a href="https://www.blogger.com/about/?bpli=1#create" style="text-decoration:none" class="link">Crie um blog </a>&ensp;
+<a href="https://www.blogger.com/about/?bpli=1" style="text-decoration:none" class="link">Login </a>
   </div>
   </nav>
 
+  </header>
+<body>
+
+
 </body>
+
+
 </template>
 
 <style scoped>
+
+
+.link{
+  color: black;
+  background-color:brown;
+  padding: 5px;
+  border-radius: 30%;
+}
 .Nav{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   padding-inline-end: 30vh;
   width:100%;
-  color: #012E40;
+  background-color: crimson;  
+  padding: 5px;
 }
 
 .links{
@@ -43,6 +60,7 @@
 width: 50%;
  margin: 1px;
  text-decoration:none;
+ 
 }
 
 .logo{
