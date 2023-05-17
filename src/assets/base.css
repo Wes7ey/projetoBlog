@@ -1,4 +1,5 @@
-//* * color palette from <https://github.com/vuejs/theme> */
+@import "form.css"
+/* * color palette from <https://github.com/vuejs/theme> */
 /* :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -73,6 +74,7 @@
 }
  */
 
+ f
  :root {
   margin-top: 0;
   padding-left: 350px;
@@ -80,9 +82,5 @@
   background-image: url("@/assets/eab0fd0fbf66f0736a81574a16137136.jpeg");
   background-size: 100%;
   background-repeat: no-repeat;
-  }
-
-  .body{
-    cursor: url(‘https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37817d49-a5a5-4ae6-9128-16049f4d1f18/dfrtsif-d4732c3d-b5c5-4907-b9ef-a1d7ae9eded1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM3ODE3ZDQ5LWE1YTUtNGFlNi05MTI4LTE2MDQ5ZjRkMWYxOFwvZGZydHNpZi1kNDczMmMzZC1iNWM1LTQ5MDctYjllZi1hMWQ3YWU5ZWRlZDEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zTdDAZ0bmWuV9lV-kJJXZ7uL8TVL0HpAD0uT4uacIro’), auto;
   }
 
