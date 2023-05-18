@@ -38,15 +38,16 @@ export default{
 <a href="https://www.blogger.com/about/?bpli=1#create" style="text-decoration:none" class="link">Crie um blog </a>&ensp;
 <a href="https://www.blogger.com/about/?bpli=1" style="text-decoration:none" class="link">Login </a>
   </div>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/create">Novo Post</RouterLink>
   </nav>
 
   </header>
   <div class="conteudo">
-    <body>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/create">Novo Post</RouterLink>
-    <RouterView :posts="posts" @create-post="addPost" />
-  </body>
+<main>  
+  <RouterView :posts="posts" @create-post="addPost" />
+  
+</main>
   
 
 
