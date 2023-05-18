@@ -1,5 +1,5 @@
-@import "form.css"
-/* * color palette from <https://github.com/vuejs/theme> */
+/* @import "form.css"
+ *//* * color palette from <https://github.com/vuejs/theme> */
 /* :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -73,13 +73,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
  */
-/* 
+
  * {
   padding:0;
   margin:0;
-  vertical-align:baseline;
-  list-style:none;
-  border:0;
-  background-color: aqua;
-  }
- */
+/*   cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562029/cursor-worm_kij6gi.png'), auto;
+ */  } 
+
+ 
