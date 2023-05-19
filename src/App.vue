@@ -138,6 +138,8 @@ form > *{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #FFD700;
+
 }
 
 .link {
