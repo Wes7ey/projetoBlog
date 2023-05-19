@@ -6,18 +6,22 @@ import PostForm from "@/components/PostForm.vue"
             posts: Array,
         },
         data() {
+
+            const id = this.$route.params.id;
+
             return{
-                post: this.posts[this.$route.params.id],
+                id: id,
+                post: this.posts[id],
             };
         },
         components: {
             PostForm,
- },
+         },
             
      };
 
 </script>
 
 <template>
-    <PostForm :post="post"/>
+    <PostForm :post="post" :id="id"/>
 </template>
