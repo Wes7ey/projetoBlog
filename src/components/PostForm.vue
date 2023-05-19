@@ -2,6 +2,7 @@
 export default {
     props: {
         post: Object,
+        id: String,
     },
   data() {
     return {
@@ -9,6 +10,7 @@ export default {
         title: this.post?.title || "",
         content: this.post?.content || "",
       },
+      isEditing: Boolean(this.post),
     };
   },
   methods: {
@@ -18,22 +20,26 @@ export default {
         return;
       }
       const now = new Date();
+
       const dataDaPostagem = `${now.getDate()}/${
         now.getMonth() + 1
-      }/${now.getFullYear()}`;
+      }/${now.getFullYear()} - ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 
-      const newPost = {
+      const postData = {
         title: this.formData.title,
         content: this.formData.content,
         datetime: dataDaPostagem,
       };
 
-      this.$emit("create-post", newPost);
-
-      this.formData = {
+if (this.isEditing) {
+  this.$emit("edit-post", postData, this.id);
+} else {
+  this.$emit("create-post", postData)
+}
+       /* this.formData = {
         title: "",
         content: "",
-      };
+      }; */
       this.$router.push("/");
     }
   },
@@ -50,6 +56,6 @@ export default {
         placeholder="Escreva seu post aqui..."
       ></textarea>
   
-      <button type="button" @click="handleCreatePost">Criar</button>
+      <button type="button" @click="handleCreatePost">Salvar</button>
     </form>
   </template>
