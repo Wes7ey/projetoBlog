@@ -56,15 +56,19 @@ export default {
   <body>
     <input v-model="search" placeholder="Procure pelo título do post" />
     <div id="lista-posts">
-      <div class="post" v-for="(post, index) in filteredPosts" :key="post.key">
-        <h3>
+      <div class="post" v-for="post in filteredPosts" :key="post.key">
+       <div class="flex">
+        <RouterLink :to="`/detail/${getPostId(post.title)}`">
+          <h3>
           {{ post.title }}
-          <RouterLink :to="`/edit/${getPostId(post.title)}`"
+        </h3>
+      </RouterLink>
+        
+        <RouterLink :to="`/edit/${getPostId(post.title)}`"
             ><span class="material-symbols-rounded">Edit</span>
           </RouterLink>
           <span class="material-symbols-rounded" @click="setupModal (getPostId(post.title))">Delete</span>
-
-        </h3>
+      </div>
         <h4>{{ post.datetime }}</h4>
         <p>{{ post.content }}</p>
       </div>
@@ -119,5 +123,10 @@ export default {
 
   .bg-sucess{
     background: gray;
+  }
+
+  .flex{
+    display: flex;
+    align-items: center;
   }
 </style>
