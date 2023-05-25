@@ -56,7 +56,7 @@ if (this.isEditing) {
         placeholder="Escreva seu post aqui..."
       ></textarea>
   
-      <button type="button" @click="handleCreatePost">Publicar</button>
+      <button type="button" @click="handleCreatePost">Publicar Texto</button>
     </form>
   </template>
 
