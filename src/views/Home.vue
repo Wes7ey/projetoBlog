@@ -54,13 +54,13 @@ export default {
 
 <template>
   <body>
-    <input v-model="search" placeholder="Procure pelo título do post" />
+    <input v-model="search" id="Box" placeholder="Procure pelo título do post" />
     <div id="lista-posts">
       <div class="post" v-for="post in filteredPosts" :key="post.key">
        <div class="flex">
         <RouterLink :to="`/detail/${getPostId(post.title)}`">
           <h3>
-          {{ post.title }}
+          {{ post.title }} 
         </h3>
       </RouterLink>
         
@@ -68,10 +68,13 @@ export default {
             ><span class="material-symbols-rounded">Edit</span>
           </RouterLink>
           <span class="material-symbols-rounded" @click="setupModal (getPostId(post.title))">Delete</span>
+
       </div>
+
         <h4>{{ post.datetime }}</h4>
         <p>{{ post.content }}</p>
       </div>
+
     </div>
     <div class="modal" v-show="showModal">
       <div class="modal-content">
@@ -79,6 +82,7 @@ export default {
         <p> Tem certeza que quer deletar o post '{{selectedPost?.title}}'?</p>
       <div class="buttons-actions">
         <button class="bg-error" @click="setupModal">Cancelar</button>
+        &ensp;&ensp;&ensp;&ensp;&ensp;
         <button class="bg-sucess" @click="deletePost">Confirmar</button>
 
       </div>
@@ -89,6 +93,83 @@ export default {
 </template>
 
 <style scoped>
+
+#lista-posts{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+h4{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: left;
+  font-size: small;
+  padding-left: 400px;
+  padding-bottom: 10px;
+
+}
+
+p{
+  display: flex;
+align-items: center;
+justify-content: center;
+text-align: justify;
+/* margin-left: 180px;
+ */;
+width: 50%;
+margin-bottom: 10px;
+backdrop-filter: blur(12px);
+color: aliceblue;
+font-weight: bold;
+
+padding: 5%;
+
+}
+
+
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 60%;
+}
+
+#Box {
+text-align: center;
+width: 60%;
+height: 4vh;
+margin: 50px;
+background-color:   #ffff00;
+border-style: dashed;
+
+}
+
+#Box:hover{
+background-color:   #ffffb2
+;}
+
+#posts{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+}
+
+h3{
+  font-size:x-large;
+  display: flex;
+  justify-content:flex-start;
+  padding-bottom: 10px;
+  text-shadow: #ffffb2 2px 2px 2px;
+
+
+}
 .modal{
     position: absolute;
     width: 100vw;
@@ -105,16 +186,17 @@ export default {
 } 
 
 .modal-content{
-  background-color: green;
+  background-color: gold;
   display: flex;
   flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    width:80%;
-    max-width: 800px;
+    max-width: 350px;
 
     border-radius: 4px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
   .bg-error{
@@ -122,11 +204,25 @@ export default {
   }
 
   .bg-sucess{
-    background: gray;
+    background: green;
   }
 
   .flex{
     display: flex;
     align-items: center;
+    justify-content: center;
+  } 
+
+  .material-symbols-rounded{
+    color:orangered
   }
+
+  .post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
 </style>

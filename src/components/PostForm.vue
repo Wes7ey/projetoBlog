@@ -48,14 +48,15 @@ if (this.isEditing) {
 
 <template>
     <form action>
-      <input v-model="formData.title" placeholder="Título" />
+      <input v-model="formData.title" placeholder="Título"/>
   
       <textarea v-model="formData.content"
-        cols="30"
+        cols="50"
         rows="10"
         placeholder="Escreva seu post aqui..."
       ></textarea>
   
-      <button type="button" @click="handleCreatePost">Salvar</button>
+      <button type="button" @click="handleCreatePost">Publicar</button>
     </form>
   </template>
+
