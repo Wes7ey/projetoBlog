@@ -25,3 +25,6 @@ import PostForm from "@/components/PostForm.vue"
 <template>
     <PostForm :post="post" :id="id"/>
 </template>
+
+<style scoped>
+</style>
